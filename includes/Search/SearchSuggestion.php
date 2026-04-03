@@ -72,7 +72,7 @@ class SearchSuggestion {
 	 */
 	public function setText( $text, $setTitle = true ) {
 		$this->text = $text;
-		if ( $setTitle && $text !== '' && $text !== null ) {
+		if ( $setTitle && !empty( $text ) {
 			$this->setSuggestedTitle( Title::makeTitle( 0, $text ) );
 		}
 	}
